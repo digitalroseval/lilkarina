@@ -20,21 +20,10 @@ h1{font-size:clamp(36px,8vw,48px);line-height:1.12;font-weight:800;letter-spacin
 .handle{font-size:19px;color:var(--muted);margin:0 0 18px}
 .status{font-size:16px;color:#c4c4c8;margin:0 0 32px}
 .dot{color:#35d768;font-size:19px;vertical-align:-1px}
-.social{display:flex;justify-content:center;margin:0 0 65px}
-.social a{width:82px;height:82px;border:1px solid #29292f;border-radius:50%;background:#141418;display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s}
-.social a:hover{transform:scale(1.04);background:#1c1c22}
-.social svg{width:38px;height:38px}
-.feature{display:block;position:relative;height:clamp(230px,65vw,330px);border-radius:34px;overflow:hidden;text-decoration:none;text-align:left;border:1px solid #29292f;background:#171717}
-.feature>img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block;transition:transform .35s}
-.feature:hover>img{transform:scale(1.035)}
-.feature:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.03) 20%,rgba(0,0,0,.12) 40%,rgba(0,0,0,.88) 100%)}
-.arrow{position:absolute;z-index:1;right:20px;top:20px;width:58px;height:58px;border-radius:50%;background:rgba(10,10,12,.48);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:39px;font-weight:300;backdrop-filter:blur(8px)}
-.feature-copy{position:absolute;z-index:1;left:24px;right:24px;bottom:24px}
-.feature-label{font-size:13px;color:#d0d0d0;text-transform:uppercase;letter-spacing:1.8px;margin-bottom:8px}
-.feature-title{font-size:27px;font-weight:750;margin-bottom:6px}
-.feature-sub{font-size:15px;color:#ddd}
+.cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:64px;padding:18px 24px;border-radius:18px;background:#fff;color:#111;text-decoration:none;font-size:19px;font-weight:750;letter-spacing:.1px;transition:transform .2s,background .2s;margin-top:8px}
+.cta:hover{transform:translateY(-2px);background:#ededed}
 .footer{color:#626268;font-size:12px;margin-top:35px}
-@media(max-width:380px){main{padding-left:17px;padding-right:17px}.avatar{width:128px;height:128px}.social{margin-bottom:48px}.feature{border-radius:27px}}
+@media(max-width:380px){main{padding-left:17px;padding-right:17px}.avatar{width:128px;height:128px}}
 </style>
 </head>
 <body>
@@ -44,16 +33,7 @@ h1{font-size:clamp(36px,8vw,48px);line-height:1.12;font-weight:800;letter-spacin
 <h1>Lil Karina</h1>
 <p class="handle">@lilkarina</p>
 <p class="status"><span class="dot">●</span> Online</p>
-<div class="social">
-<a href="https://www.fanvue.com/karinasweett/fv-9" target="_blank" rel="noopener noreferrer" aria-label="Visit Lil Karina on Fanvue">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-</a>
-</div>
-<a class="feature" href="https://www.fanvue.com/karinasweett/fv-9" target="_blank" rel="noopener noreferrer">
-<img src="./6E6506F6-0E83-41F4-90C9-655FFC75D303.JPG" alt="">
-<span class="arrow">↗</span>
-<div class="feature-copy"><div class="feature-label">Lil Karina</div><div class="feature-title">Discover more of me</div><div class="feature-sub">Exclusive content · Visit my Fanvue</div></div>
-</a>
+<a class="cta" href="https://www.fanvue.com/karinasweett/fv-9" target="_blank" rel="noopener noreferrer">talk with me;)</a>
 <div class="footer">© Lil Karina</div>
 </main>
 </body>
