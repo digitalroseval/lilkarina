@@ -18,9 +18,9 @@ main{max-width:600px;margin:-88px auto 0;position:relative;z-index:1;padding:0 2
 .avatar{display:block;width:142px;height:142px;object-fit:cover;border-radius:50%;border:5px solid var(--bg);margin:0 auto 22px;background:#222}
 h1{font-size:clamp(36px,8vw,48px);line-height:1.12;font-weight:800;letter-spacing:-1.3px;margin:0 0 12px}
 .handle{font-size:19px;color:var(--muted);margin:0 0 18px}
-.status{font-size:16px;color:#c4c4c8;margin:0 0 32px}
+.status{font-size:16px;color:#c4c4c8;margin:0 0 12px}.location{font-size:14px;color:#aaa;margin:0 0 28px}.pin{font-size:13px}
 .dot{color:#35d768;font-size:19px;vertical-align:-1px}
-.cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:64px;padding:18px 24px;border-radius:18px;background:#fff;color:#111;text-decoration:none;font-size:19px;font-weight:750;letter-spacing:.1px;transition:transform .2s,background .2s;margin-top:8px}
+.links{display:grid;gap:14px}.cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:64px;padding:18px 24px;border-radius:18px;background:#fff;color:#111;text-decoration:none;font-size:19px;font-weight:750;letter-spacing:.1px;transition:transform .2s,background .2s}.cta:nth-child(2){background:#17171c;color:#fff;border:1px solid #34343b}.cta:nth-child(3){background:#e62117;color:#fff}
 .cta:hover{transform:translateY(-2px);background:#ededed}
 .footer{color:#626268;font-size:12px;margin-top:35px}
 @media(max-width:380px){main{padding-left:17px;padding-right:17px}.avatar{width:128px;height:128px}}
@@ -33,8 +33,16 @@ h1{font-size:clamp(36px,8vw,48px);line-height:1.12;font-weight:800;letter-spacin
 <h1>Lil Karina</h1>
 <p class="handle">@lilkarina</p>
 <p class="status"><span class="dot">●</span> Online</p>
+<p class="location"><span class="pin" aria-hidden="true">📍</span> <span id="city">Locating...</span></p>
+<nav class="links" aria-label="Social links">
+<a class="cta" href="/go/fansly" target="_blank" rel="noopener noreferrer">Fansly</a>
 <a class="cta" href="/go/fanvue" target="_blank" rel="noopener noreferrer">talk with me;)</a>
+<a class="cta" href="/go/youtube" target="_blank" rel="noopener noreferrer">YouTube</a>
+</nav>
 <div class="footer">© Lil Karina</div>
 </main>
+<script>
+(async()=>{const el=document.getElementById("city");try{const r=await fetch("https://ipapi.co/json/",{cache:"no-store"});if(!r.ok)throw new Error();const d=await r.json();el.textContent=d.city||d.region||d.country_name||"your area"}catch{el.textContent="your area"}})();
+</script>
 </body>
 </html>
