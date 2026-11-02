@@ -1,0 +1,12 @@
+name = "agency-knowledge-base"
+main = "src/index.js"
+compatibility_date = "2026-11-02"
+
+[vars]
+APP_NAME = "Agency Knowledge Base"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "knowledge-base"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"

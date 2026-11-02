@@ -1,0 +1,15 @@
+{
+  "name": "agency-knowledge-base",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 execute knowledge-base --local --file=./migrations/0001_init.sql",
+    "db:remote": "wrangler d1 execute knowledge-base --remote --file=./migrations/0001_init.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
